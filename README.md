@@ -5,4 +5,4 @@ https://www.youtube.com/watch?v=JkNV0rSndJ0
 
 
 
-a quick 1-day project I made because I wanted to see how well I could do :)
+a quick 1-day game I made because I wanted to see how well I could do :)

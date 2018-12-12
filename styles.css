@@ -28,3 +28,17 @@ body {
 .box-number {
     cursor: pointer
 }
+
+#input {
+    padding-top: 100px;
+    text-align: center
+}
+
+#input input {
+    margin: 5px;
+    padding: 0 5px;
+    border-radius: 10px;
+    outline: none !important;
+    border: none;
+    height: 30px
+}

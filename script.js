@@ -2,9 +2,8 @@ let game;
 const NUM_NUMBERS = 7; // get this from DOM element in future
 
 class Game {
-    constructor(n, consecutive) {
-        this.new_round(n);
-        this.n = n;
+    constructor() {
+        this.new_round();
     }
 
     clicked(i, j) {
@@ -20,8 +19,10 @@ class Game {
         }
     }
 
-    new_round(n) {
+    new_round() {
         if(this.hide) clearTimeout(this.hide);
+        this.n = document.querySelector('#numbers').value;
+        this.delay = document.querySelector('#delay').value;
         this.used_coords = [];
         this.enable_clicking = false;
         this.clear_canvas();
@@ -33,7 +34,7 @@ class Game {
             ['', '', '', '', '', '', '', '']
         ];
 
-        this.arr = get_random(n);
+        this.arr = get_random(this.n);
         this.place_numbers();
         this.paint_canvas();
         this.index = 0;
@@ -45,7 +46,7 @@ class Game {
                 e.classList.add('hidden');
                 this.enable_clicking = true;
             });
-        }, 3000);
+        }, this.delay);
     }
 
     place_numbers() {

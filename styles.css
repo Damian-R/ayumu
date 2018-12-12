@@ -1,0 +1,30 @@
+body {
+    background-color: #222222
+}
+
+#game {
+    max-width: 890px;
+    max-height: 640px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.box, .box-number {
+    width: 100px;
+    height: 100px;
+    background-color: transparent;
+    font-size: 80px;
+    text-align: center;
+    padding-top: 10px;
+    color: #DDDDDD;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.1s;
+}
+
+.box-number {
+    cursor: pointer
+}

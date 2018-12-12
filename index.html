@@ -8,8 +8,13 @@
 <body>
     <div id='game'></div>
     <div id='input'>
-        <input id='delay' type='text' placeholder='delay' value='210'>
-        <input id='numbers' type='text' placeholder='numbers' value='9'>
+        <input id='delay' type='range' min='100' max='3000' value='210' oninput='delayout.value = delay.value + "ms"' step='10'>
+        <br><output id='delayout'>210ms</output>
+        <br><input id='numbers' type='range' min='1' max='9' value='9' oninput='numbersout.value = numbers.value + " number(s)"'>
+        <br><output id='numbersout'>9 number(s)</output>
+    </div>
+    <div id='info'>
+        press any key for a new round
     </div>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" media="screen" href="styles.css" />

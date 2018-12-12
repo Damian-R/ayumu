@@ -22,6 +22,10 @@ class Game {
     new_round() {
         if(this.hide) clearTimeout(this.hide);
         this.n = document.querySelector('#numbers').value;
+        if (this.n > 9 || this.n < 1) {
+            this.n = 5;
+            document.querySelector('#numbers').value = 5
+        }
         this.delay = document.querySelector('#delay').value;
         this.used_coords = [];
         this.enable_clicking = false;

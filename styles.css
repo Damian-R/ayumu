@@ -2,6 +2,13 @@ body {
     background-color: #222222
 }
 
+output {
+    font-size: 40px;
+    color: #DDDDDD;
+    text-align: center;
+    min-width: 1000px
+}
+
 #game {
     max-width: 890px;
     max-height: 640px;
@@ -11,6 +18,12 @@ body {
     grid-template-rows: repeat(5, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
+}
+
+#info {
+    font-size: 40px;
+    color: #DDDDDD;
+    text-align: center
 }
 
 .box, .box-number {
@@ -30,8 +43,8 @@ body {
 }
 
 #input {
-    padding-top: 100px;
-    text-align: center
+    padding-top: 20px;
+    text-align: center;
 }
 
 #input input {

@@ -36,6 +36,7 @@ output {
     color: #DDDDDD;
     font-family: 'Roboto', sans-serif;
     transition: 0.1s;
+    border-radius: 5px
 }
 
 .box-number {

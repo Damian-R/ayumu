@@ -3,10 +3,10 @@ class Game {
         this.new_round();
     }
 
-    clicked(i, j, arr) {
+    clicked(i, j, map, arr) {
         const box = document.querySelectorAll('#game div')[8*i + j]
         if (!this.enable_clicking || !box.className.match(/box-number/)) return;
-        if (this.map[i][j] == arr[this.index]) {
+        if (map[i][j] == arr[this.index]) {
             const box = document.querySelectorAll('#game div')[8*i + j]
             box.style.backgroundColor = 'transparent'
             this.index++;
@@ -89,7 +89,7 @@ class Game {
                 if (map[i][j] != '')
                     box_element.className = 'box-number';
                 box_element.addEventListener('click', () => {
-                    this.clicked(i, j, arr);
+                    this.clicked(i, j, map, arr);
                 });
                 canvas.appendChild(box_element);
             });

@@ -2,20 +2,18 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Ayumu</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:900" rel="stylesheet">
+    <title>ayumu</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:900,500" rel="stylesheet">
 </head>
 <body>
     <div id='game'></div>
     <div id='input'>
-        <input id='delay' type='range' min='100' max='3000' value='210' oninput='delayout.value = delay.value + "ms"' step='10'>
-        <br><output id='delayout'>210ms</output>
-        <br><input id='numbers' type='range' min='1' max='9' value='9' oninput='numbersout.value = numbers.value + " number(s)"'>
-        <br><output id='numbersout'>9 number(s)</output>
+        <input id='delay' type='range' min='100' max='3000' value='210' oninput='delayout.value = delay.value' step='10'>
+        <br><input id='delayout' type='text' value='210' onkeypress='return in_range(event);' oninput='delay.value = delayout.value;' onclick='delayout.value = ""' /><span> ms</span>
+        <br><input id='numbers' type='range' min='1' max='9' value='9' oninput='numbersout.value = numbers.value'>
+        <br><input id='numbersout' type='text' value='9' onkeypress='return is_number(event)' oninput='numbers.value = numbersout.value;' onclick='numbersout.value = ""' /><span> number(s)</span>
     </div>
-    <div id='info'>
-        press any key for a new round
-    </div>
+    <div id='info'> press r for a new round </div>
     <script src="./js/helpers.js"></script>
     <script src="./js/game.js"></script>
     <script src="./js/script.js"></script>

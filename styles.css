@@ -1,12 +1,13 @@
 body {
-    background-color: #222222
+    background-color: #222222;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
 
-output {
+span {
     font-size: 40px;
     color: #DDDDDD;
     text-align: center;
-    min-width: 1000px
 }
 
 #game {
@@ -34,25 +35,34 @@ output {
     text-align: center;
     padding-top: 10px;
     color: #DDDDDD;
-    font-family: 'Roboto', sans-serif;
     transition: 0.1s;
-    border-radius: 5px
+    border-radius: 5px;
+    font-weight: 900;
 }
 
 .box-number {
     cursor: pointer
 }
 
+input[type=text] {
+    height: 50px;
+    border: 0;
+    border-bottom: 2px solid #DDDDDD;
+    text-align: center;
+    width: 100px;
+    outline: none;
+    font-size: 40px;
+    color: #DDDDDD;
+    -webkit-transition: border 0.3s;
+    transition: border 0.3s;
+    background-color: transparent;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid steelblue;
+}
+
 #input {
     padding-top: 20px;
     text-align: center;
-}
-
-#input input {
-    margin: 5px;
-    padding: 0 5px;
-    border-radius: 10px;
-    outline: none !important;
-    border: none;
-    height: 30px
 }
